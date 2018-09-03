@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+	    <meta charset="utf-8">
+		<title>Tagcloud Mittelfinger (07/2014) - pr0stats - pr0gramm.com Statistiken</title>
+	    <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+	    <link href="../css/style.css" rel="stylesheet" type="text/css">
+	    <link href="../css/responsive.css" rel="stylesheet" type="text/css">
+	    <link rel="icon" type="image/x-icon" href="http://pr0stats.github.io/img/favicon.ico">
+		<link rel="shortcut icon" type="../img/x-icon" href="img/favicon.ico">
+		<link type="image/x-icon" href="../img/favicon.ico">
+	</head>
+	<body>
+		<ul class="toc toc-analysen">
+			<li><a href="#annahmen">Annahmen</a></li>
+			<li><a href="#informationen">Informationen</a></li>
+			<li><a href="#resultate">Resultate</a></li>
+			<li><a href="#methodik">Methodik</a></li>
+			<li><a href="#kritik">Kritik</a></li>
+		</ul>
+
+		<h1>Tagcloud Mittelfinger</h1>
+		<div class="thumbnail-box">
+			<a href="../img/10-tagcloud-juli2.png"><img class="thumbnail" src="../img/thumb/10-tagcloud-juli2-thumb.png" alt="Tagcloud Mittelfinger (07/2014)" /></a>
+		</div>
+
+		<h2 id="informationen"><a class="headerlink" href="#informationen" title="Permalink zu diesem Abschnitt">¶</a>Informationen</h2>
+		<ul>
+			<li>Angezeigt werden die 20 meist genutzten Tags im Monat Juni abzüglich <code>nsfw</code>, <code>nsfl</code> und <code>sfw</code></li>
+			<li>Die Größe eines Tags repräsentiert seine Verwendungshäufigkeit</li>
+			<li>Es wurden alle Einträge von 01.07.2014 bis 19.07.2014 berücksichtigt</li>
+		</ul>
+
+		<h2 id="methodik"><a class="headerlink" href="#methodik" title="Permalink zu diesem Abschnitt">¶</a>Methodik</h2>
+		<ul>
+			<li>siehe <a href="../methodik.html">Hinweise zur Methodik</a></li>
+			<li>Zeitraum <code>07/2014</code></li>
+			<li><code>SELECT `tags` FROM `pr0stats` WHERE `tags` IS NOT NULL</code></li>
+			<li>Erstellung der Tagcloud mittels <a href="http://www.tagxedo.com/app.html">Tagxedo</a></li>
+		</ul>
+		
+	 	<!-- JavaScript sources -->
+	    <script src="../js/jquery-1.10.2.js"></script>
+	</body>
+</html>

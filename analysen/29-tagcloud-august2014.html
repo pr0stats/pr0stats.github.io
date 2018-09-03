@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+	    <meta charset="utf-8">
+		<title>Tagcloud August 2014 (08/2014) - pr0stats - pr0gramm.com Statistiken</title>
+	    <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+	    <link href="../css/style.css" rel="stylesheet" type="text/css">
+	    <link href="../css/responsive.css" rel="stylesheet" type="text/css">
+	    <link rel="icon" type="image/x-icon" href="http://pr0stats.github.io/img/favicon.ico">
+		<link rel="shortcut icon" type="../img/x-icon" href="img/favicon.ico">
+		<link type="image/x-icon" href="../img/favicon.ico">
+	</head>
+	<body>
+		<ul class="toc toc-analysen">
+			<li><a href="#annahmen">Annahmen</a></li>
+			<li><a href="#informationen">Informationen</a></li>
+			<li><a href="#resultate">Resultate</a></li>
+			<li><a href="#methodik">Methodik</a></li>
+			<li><a href="#kritik">Kritik</a></li>
+		</ul>
+
+		<h1>Tagcloud August 2014</h1>
+		<span class="prg-link-box">auf <a class="prg-link" target="_blank" href="http://pr0gramm.com/user/pr0stats/uploads/335380">pr0gramm</a></span>
+		<div class="thumbnail-box">
+			<a href="../img/29-tagcloud-august2014.png"><img class="thumbnail" src="../img/thumb/29-tagcloud-august2014-thumb.png" alt="Tagcloud August 2014" rel="zoom" /></a>
+		</div>
+
+		<a class="image-toggle-button">Interaktive Tagcloud anzeigen</a>
+		<div class="image-toggle">
+			<script src="http://cdn.tagul.com/embed/kxuco7saijxw"></script>
+			<!-- Please don't remove attribution to Tagul.com -->
+			<div style="display: table; margin: 0 auto;"><a href="http://tagul.com/">Created with Tagul.com</a></div>
+		</div>
+
+		<h2 id="informationen"><a class="headerlink" href="#informationen" title="Permalink zu diesem Abschnitt">¶</a>Informationen</h2>
+		<ul>
+			<li>Angezeigt werden meist genutzten 250 Tags ohne <code>nsfw</code>, <code>nsfl</code> und <code>sfw</code></li>
+			<li>Außerdem wurden folgende, generische oder ungewollte Tags entfernt, um ein besseres Abbild vom Tag-Geschehen zu erhalten:
+				<code>repost</code>,
+				<code>würde</code>,
+				<code>tl;dr</code>,
+				<code>10/10</code>,
+				<code>kadse</code>,
+				<code>süßvieh</code>,
+				<code>benisfarmer</code>,
+				<code>kann weg</code>,
+				<code>weltkulturerbe</code>,
+				<code>9fag</code>,
+				<code>9gag</code>,
+				<code>ass</code>,
+				<code>gif</code>
+			</li>
+			<li>Die Größe eines Tags repräsentiert seine Verwendungshäufigkeit</li>
+			<li>Es wurden alle Einträge von 01.08.2014 bis 31.08.2014 berücksichtigt</li>
+		</ul>
+
+		<h2 id="methodik"><a class="headerlink" href="#methodik" title="Permalink zu diesem Abschnitt">¶</a>Methodik</h2>
+		<ul>
+			<li>siehe <a href="../methodik.html">Hinweise zur Methodik</a> (Datenstand 06.09.2014)</li>
+			<li>Zeitraum <code>08/2014</code></li>
+			<li><code>SELECT `tags` FROM `pr0stats` WHERE DATE(FROM_UNIXTIME(`created`)) &gt;= '2014-08-01' AND DATE(FROM_UNIXTIME(`created`)) &lt;= '2014-08-31' AND `tags` IS NOT NULL;</code></li>
+			<li>Erstellung der Tagcloud mittels <a href="http://tagul.com/">Tagul</a></li>
+		</ul>
+
+	 	<!-- JavaScript sources -->
+	    <script src="../js/jquery-1.10.2.js"></script>
+	    <script src="../js/template.js"></script>
+	    <script src="../js/script.js"></script>
+	</body>
+</html>

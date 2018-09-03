@@ -1,0 +1,35 @@
+<div class="edit-link"><a target="_blank" href="">Diese Seite bearbeiten</a></div>
+
+<script type="text/javascript">
+$(function() {
+	var $link = $('#fuken-promo > a');
+	var $img = $('#fuken-promo > a > img');
+
+	setInterval(function() {
+		var rand = 1 + Math.floor(Math.random() * 32);
+		var link = 'http://derfuken.com/?utm_source=prostats&utm_medium=promoimage&utm_content=img-' + rand + '&utm_campaign=prostatsfuken2016';
+		var img = 'http://pr0kular.herokuapp.com/bundles/prostats/images/' + rand + '.png';
+		$img.fadeOut(150, function() {
+			$link.attr('href', link);
+			$img.attr('src', img);
+			$img.fadeIn(250);
+		});
+	},
+	5000); // every 1 second
+});
+</script>
+
+<footer>
+	<div class="left-box">
+		<a href="#">top</a>
+	</div>
+	
+	<div class="center-box">
+		<iframe src="http://rcm-eu.amazon-adsystem.com/e/cm?t=pr0sts-21&o=3&p=48&l=bn1&mode=computers&browse=340843031&fc1=000000&lt1=_blank&lc1=3366FF&bg1=FFFFFF&f=ifr" marginwidth="0" marginheight="0" width="728" height="90" border="0" frameborder="0" style="border:none;" scrolling="no"></iframe>
+	</div>
+	
+	<div class="right-box">
+		<a href="LICENSE">unlizensiert</a>
+	</div>
+</footer>
+

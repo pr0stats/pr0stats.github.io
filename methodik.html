@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+	    <meta charset="utf-8">
+		<title>pr0stats - pr0gramm.com Statistiken</title>
+	    <link href="css/normalize.css" rel="stylesheet" type="text/css">
+	    <link href="css/style.css" rel="stylesheet" type="text/css">
+	    <link href="css/responsive.css" rel="stylesheet" type="text/css">
+	    <link rel="icon" type="image/x-icon" href="http://pr0stats.github.io/img/favicon.ico">
+		<link rel="shortcut icon" type="img/x-icon" href="img/favicon.ico">
+		<link type="image/x-icon" href="img/favicon.ico">
+	</head>
+	<body>
+		<h1>Methodik</h1>
+		
+		<h2 id="sourcing"><a class="headerlink" href="#sourcing" title="Permalink zu diesem Abschnitt">¶</a>Datengewinnung</h2>
+		<div class="thumbnail-box">
+			<a href="img/pr0stats-methodik-1.png"><img class="thumbnail" src="img/thumb/pr0stats-methodik-1-thumb.png" alt="Methotik Datengewinnung" /></a>
+		</div>
+
+		<p>Mit dem pr0stats script werden zunächst Informationen zu Uploads über die pr0gramm.com API abgerufen. Diese Daten werden dann mittels SQL Queries und manueller Aufarbeitung sowie anschließender Visualisierung in wohl konsumierbare Bilder transformiert.</p>
+		<ol>
+			<li><strong>Abruf der Upload-Posts</strong><!-- <br />Lorem Ipsum --></li>
+			<li><strong>Abruf der Kommentar-Anzahl und Tags</strong><!-- <br />Lorem Ipsum --></li>
+			<li><strong>Speichern der Ergebnisse in Datenbank</strong><!-- <br />Lorem Ipsum --></li>
+		</ol>
+		
+		<h2 id="schema"><a class="headerlink" href="#schema" title="Permalink zu diesem Abschnitt">¶</a>Datenbankschema</h2>
+		<div class="thumbnail-box">
+			<a href="img/pr0stats-methodik-2.png"><img class="thumbnail" src="img/thumb/pr0stats-methodik-2-thumb.png" rel="zoom" alt="Strukture Datentabelle" /></a>
+		</div>
+	 	
+		<ul>
+			<li><code>id</code> - ID des pr0gramm-Uploads (<code>http://pr0gramm.com/new/&lt;id&gt;</code>)</li>
+			<li><code>user</code> - Uploader</li>
+			<li><code>sf_flag</code> - safe-for-Flag (sfw, nsfw, nsfl)</li>
+			<li><code>mark</code> - Status des Uploaders</li>
+			<li><code>promoted</code> - ID eines beliebten Uploads</li>
+			<li><code>up</code> - Anzahl Upvotes</li>
+			<li><code>down</code> - Anzahl Downvotes</li>
+			<li><code>created</code> - Zeitstempel des Eintrags</li>
+			<li><code>fullsize</code> - Vollbild-URL</li>
+			<li><code>source</code> - externe Quelle (optional)</li>
+			<li><code>image</code> - relativer Pfad zum Bild/Video</li>
+			<li><code>thumb</code> - relativer Pfad zum Thumbnail</li>
+			<li><a name="tags"></a><code>tags</code> - Tags<br>Tags werden mit | verkettet und als MySQL-Datentyp <code>TEXT</code> gespeichert, zukünftig geplant ist, die Tags entsprechend in einer separaten Tabelle zu verwalten</li>
+			<li><code>comments</code> - Anzahl der Kommentare</li>
+		</ul>
+
+	 	<!-- JavaScript sources -->
+	    <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+	    <script src="js/template.js"></script>
+	    <script type="text/javascript" src="js/script.js"></script>
+	</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+	    <meta charset="utf-8">
+		<title>Distribution der sf-Attribute (2007 bis 07/2014) - pr0stats - pr0gramm.com Statistiken</title>
+	    <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+	    <link href="../css/style.css" rel="stylesheet" type="text/css">
+	    <link href="../css/responsive.css" rel="stylesheet" type="text/css">
+	    <link rel="icon" type="image/x-icon" href="http://pr0stats.github.io/img/favicon.ico">
+		<link rel="shortcut icon" type="../img/x-icon" href="img/favicon.ico">
+		<link type="image/x-icon" href="../img/favicon.ico">
+	</head>
+	<body>
+		<ul class="toc toc-analysen">
+			<li><a href="#annahmen">Annahmen</a></li>
+			<li><a href="#informationen">Informationen</a></li>
+			<li><a href="#resultate">Resultate</a></li>
+			<li><a href="#methodik">Methodik</a></li>
+			<li><a href="#kritik">Kritik</a></li>
+		</ul>
+
+		<h1>Distribution der sf-Attribute <span class="timeframe">01/2007 bis 07/2014</span></h1>
+		<span class="prg-link-box">auf <a class="prg-link" target="_blank" href="http://pr0gramm.com/user/knorrig/uploads/232871">pr0gramm</a> (gepostet von User knorrig)</span>
+		<a href="../img/13-safe-for-distribution.png"><img src="../img/13-safe-for-distribution.png" alt="Distribution der sf-Attribute (2007 bis 07/2014)" /></a>
+
+		<h2 id="resultate"><a class="headerlink" href="#resultate" title="Permalink zu diesem Abschnitt">¶</a>Resultate</h2>
+		<ul>
+			<li>Gesamt 203203 Einträge</li>
+			<li>Davon 95529 Reposts (47%) ohne <code>nsfw</code> oder <code>nsfl</code> Tag (ergo <code>sfw</code>)</li>
+			<li>45556 Einträge (22%) sind mit <code>nsfw</code> aber nicht <code>nsfl</code> getagged (ergo <code>nsfw</code>)</li>
+			<li>Und 9124 Einträge (4%) getagged mit <code>nsfl</code></li>
+			<li>Für 52994 Einträge (26%) konnte nach diesem Schema kein safe for-Attribut ermittelt werden</li>
+		</ul>
+
+		<h2 id="methodik"><a class="headerlink" href="#methodik" title="Permalink zu diesem Abschnitt">¶</a>Methodik</h2>
+		<ul>
+			<li>siehe <a href="../methodik.html">Hinweise zur Methodik</a></li>
+			<li>Zeitraum <code>01/2007</code> bis <code>07/2014</code></li>
+			<li>Ermittlung der Gesamtzahl per <code>SELECT COUNT(*) FROM `pr0stats`</code></li>
+			<li><code class="block">(SELECT COUNT(*) FROM `pr0stats` WHERE `tags` NOT LIKE '%nsfw%' AND `tags` NOT LIKE '%nsfl%') UNION (SELECT COUNT(*) FROM `pr0stats` WHERE `tags` LIKE '%nsfw%' AND `tags` NOT LIKE '%nsfl%') UNION (SELECT COUNT(*) FROM `pr0stats` WHERE `tags` LIKE '%nsfl%')</code></li>
+			<li>Werte für <code>nsfw</code> und <code>nsfl</code> ergeben sich aus obig ermittelten Daten: <code>nsfw</code> (22%) und <code>nsfl</code> (4%)</li>
+			<li>Als Resultat für <code>sfw</code> wird der explizit ermittelte Wert für <code>sfw</code> (47%) addiert mit dem Wert der unklassifizierten Menge (26%), ergo: <code>sfw</code> = 47% + 26% = 73%</li>
+		</ul>
+
+	 	<!-- JavaScript sources -->
+	    <script src="../js/jquery-1.10.2.js"></script>
+	    <script src="../js/template.js"></script>
+	    <script src="../js/script.js"></script>
+	</body>
+</html>

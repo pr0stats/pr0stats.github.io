@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+	    <meta charset="utf-8">
+		<title>Top 5 Uploads nach Interaktionsgrad (01/2007 bis 07/2014) - pr0stats - pr0gramm.com Statistiken</title>
+	    <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+	    <link href="../css/style.css" rel="stylesheet" type="text/css">
+	    <link href="../css/responsive.css" rel="stylesheet" type="text/css">
+	    <link rel="icon" type="image/x-icon" href="http://pr0stats.github.io/img/favicon.ico">
+		<link rel="shortcut icon" type="../img/x-icon" href="img/favicon.ico">
+		<link type="image/x-icon" href="../img/favicon.ico">
+	</head>
+	<body>
+		<ul class="toc toc-analysen">
+			<li><a href="#annahmen">Annahmen</a></li>
+			<li><a href="#informationen">Informationen</a></li>
+			<li><a href="#resultate">Resultate</a></li>
+			<li><a href="#methodik">Methodik</a></li>
+			<li><a href="#kritik">Kritik</a></li>
+		</ul>
+		
+		<h1>Top 5 Uploads nach Interaktionsgrad</h1>
+		<p>Ermittelt wurden die fünf Uploads, die die meiste Interaktion erzeugt haben. Interaktionen sind Upvotes, Downvotes, Comments (und Tags). Die Summe dieser Werte bildet die Interaktionssumme.</p>
+		<code class="block">upvotes + downvotes + # of comments = summe</code>
+
+		<ol class="top-list">
+			<li><h2>1</h2><span class="math"><span class="up" title="Upvotes">2628</span> <span class="down" title="Downvotes">239</span> <span class="comments" title="Kommentare">139</span><span class="votes" title="Ergebnis">3006</span></span><span class="image"><a href="http://pr0gramm.com/new/205612"><img target="_blank" src="http://thumb.pr0gramm.com/2014/07/02/552813711e321d7b.jpg" /></a></span><span class="user">Ben</span></li>
+			<li><h2>2</h2><span class="math"><span class="up" title="Upvotes">1636</span> <span class="down" title="Downvotes">277</span> <span class="comments" title="Kommentare">194</span><span class="votes" title="Ergebnis">2107</span></span><span class="image"><a href="http://pr0gramm.com/new/215206"><img target="_blank" src="http://thumb.pr0gramm.com/2014/07/09/d21f181a3cb53bf5.jpg" /></a></span><span class="user">Blausaeurekapsel</span></li>
+			<li><h2>3</h2><span class="math"><span class="up" title="Upvotes">1503</span> <span class="down" title="Downvotes">137</span> <span class="comments" title="Kommentare">67</span><span class="votes" title="Ergebnis">1707</span></span><span class="image"><a href="http://pr0gramm.com/new/220922"><img target="_blank" src="http://thumb.pr0gramm.com/2014/07/13/27964914fe6cd6c7.jpg" /></a></span><span class="user">dok_gonzo</span></li>
+			<li><h2>4</h2><span class="math"><span class="up" title="Upvotes">1369</span> <span class="down" title="Downvotes">52</span> <span class="comments" title="Kommentare">39</span><span class="votes" title="Ergebnis">1460</span></span><span class="image"><a href="http://pr0gramm.com/new/217530"><img target="_blank" src="http://thumb.pr0gramm.com/2014/07/11/189526fd430f980f.jpg" /></a></span><span class="user">bx4K</span></li>
+			<li><h2>5</h2><span class="math"><span class="up" title="Upvotes">1122</span> <span class="down" title="Downvotes">143</span> <span class="comments" title="Kommentare">99</span><span class="votes" title="Ergebnis">1364</span></span><span class="image"><a href="http://pr0gramm.com/new/213776"><img target="_blank" src="http://thumb.pr0gramm.com/2014/07/08/e2ad931b911510f3.jpg" /></a></span><span class="user">Haerenthel</span></li>
+		</ol>
+		
+		<h2 id="methodik"><a class="headerlink" href="#methodik" title="Permalink zu diesem Abschnitt">¶</a>Methodik</h2>
+		<ul>
+			<li>siehe <a href="../methodik.html">Hinweise zur Methodik</a></li>
+			<li>Zeitraum <code>01/2007</code> bis <code>07/2014</code></li>
+			<li><code class="block">SELECT `id`, `up`, `down`, `comments`, (`up` + `down` + `comments`) AS `result`, CONCAT('http://thumb.pr0gramm.com/', `thumb`) AS `src` FROM `pr0stats` WHERE YEAR(FROM_UNIXTIME(`created`)) = '2014' ORDER BY `result` DESC LIMIT 0, 5</code></li>
+			<li>Der Grad der Interaktion wird ermittelt durch Summe aus <code>upvotes</code> + <code>downvotes</code> + <code>comments</code>; die Anzahl der Tags wäre für diese Erhebung ebenfalls interessant, ist jedoch mit <a href="../methodik.html#tags">gegebenem Tabellenschema</a> umständlich und wird daher ausgelassen</li>
+		</ul>
+		
+	 	<!-- JavaScript sources -->
+	    <script src="../js/jquery-1.10.2.js"></script>
+	    <script src="../js/template.js"></script>
+	    <script src="../js/script.js"></script>
+	</body>
+</html>

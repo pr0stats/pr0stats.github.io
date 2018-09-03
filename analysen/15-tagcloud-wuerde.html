@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+	    <meta charset="utf-8">
+		<title>Tagcloud Würde (2007 bis 07/2014) - pr0stats - pr0gramm.com Statistiken</title>
+	    <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+	    <link href="../css/style.css" rel="stylesheet" type="text/css">
+	    <link href="../css/responsive.css" rel="stylesheet" type="text/css">
+	    <link rel="icon" type="image/x-icon" href="http://pr0stats.github.io/img/favicon.ico">
+		<link rel="shortcut icon" type="../img/x-icon" href="img/favicon.ico">
+		<link type="image/x-icon" href="../img/favicon.ico">
+	</head>
+	<body>
+		<ul class="toc toc-analysen">
+			<li><a href="#annahmen">Annahmen</a></li>
+			<li><a href="#informationen">Informationen</a></li>
+			<li><a href="#resultate">Resultate</a></li>
+			<li><a href="#methodik">Methodik</a></li>
+			<li><a href="#kritik">Kritik</a></li>
+		</ul>
+
+		<h1>Tagcloud Würde</h1>
+		<div class="thumbnail-box">
+			<a href="../img/15-tagcloud-wuerde.png"><img class="thumbnail" src="../img/thumb/15-tagcloud-wuerde-thumb.png" alt="Tagcloud Würde (2007 bis 07/2014)" rel="zoom" /></a>
+		</div>
+
+		<a class="image-toggle-button">Interaktive Tagcloud anzeigen</a>
+		<div class="image-toggle">
+			<script src="http://cdn.tagul.com/embed/371869@7"></script>
+			<!-- Please don't remove attribution to Tagul.com -->
+			<div style="display: table; margin: 0 auto;"><a href="http://tagul.com/">Created with Tagul.com</a></div>
+		</div>
+
+		<h2 id="informationen"><a class="headerlink" href="#informationen" title="Permalink zu diesem Abschnitt">¶</a>Informationen</h2>
+		<ul>
+			<li>Angezeigt werden meist genutzten Tags abzüglich <code>nsfw</code>, <code>nsfl</code> und <code>sfw</code></li>
+			<li>Die Größe eines Tags repräsentiert seine Verwendungshäufigkeit</li>
+			<li>Es wurden alle Einträge von 01.07.2014 bis 19.07.2014 berücksichtigt</li>
+		</ul>
+
+		<h2 id="methodik"><a class="headerlink" href="#methodik" title="Permalink zu diesem Abschnitt">¶</a>Methodik</h2>
+		<ul>
+			<li>siehe <a href="../methodik.html">Hinweise zur Methodik</a></li>
+			<li>Zeitraum <code>01/2007</code> bis <code>07/2014</code></li>
+			<li><code>SELECT `tags` FROM `pr0stats` WHERE `tags` IS NOT NULL</code></li>
+			<li>Erstellung der Tagcloud mittels <a href="http://tagul.com/">Tagul</a></li>
+		</ul>
+		
+	 	<!-- JavaScript sources -->
+	    <script src="../js/jquery-1.10.2.js"></script>
+	    <script src="../js/template.js"></script>
+	    <script src="../js/script.js"></script>
+	</body>
+</html>
